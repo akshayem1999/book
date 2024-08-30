@@ -23,9 +23,6 @@ time.sleep(5)
 driver.find_element(By.XPATH,"//option[@value='Product_TitleSort asc']").click()
 time.sleep(5)
 first_book = driver.find_element(By.XPATH,"https://www.bookswagon.com/book/1918-david-cornish-md/9781482687156][1]")
-first_book1= first_book.text.strip()
-if first_book1 == '1918':
-    print('The first book on the page is1918.')
 driver.find_element(By.XPATH,"//input[@value='Add to cart'][1]").click()
 cart_count_element = driver.find_element(By.XPATH,"//label[@id='ctl00_lblTotalCartItems']")
 cart_count_text = cart_count_element.text.strip()
@@ -33,5 +30,8 @@ if cart_count_text == '1':
     print('The number of products in the cart is 1.')
 else:
     print('The number of products in the cart is {cart_count_text}.')
+
+
+
 
 
